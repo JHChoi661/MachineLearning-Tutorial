@@ -32,7 +32,7 @@ model_boston.compile(loss='mse')
 
 model_boston.summary()
 
-# loss 가 19 ~ 21 에서 batchNormalization 적용하였더니 9 ~ 10 으로 감소
+# loss 가 19 ~ 21 에서 batchNormalization layer 추가 후 9 ~ 10 으로 감소
 model_boston.fit(inV_boston, deV_boston, epochs=1000, verbose=0)
 model_boston.fit(inV_boston, deV_boston, epochs=10)
 
