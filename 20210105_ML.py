@@ -2,7 +2,7 @@
 
 import pandas as pd
 import tensorflow as tf
-
+''' 
 ##### 범주형 데이터의 분류 : classification
 url_iris = 'https://raw.githubusercontent.com/blackdew/tensorflow1/master/csv/iris.csv'
 iris = pd.read_csv(url_iris)
@@ -27,7 +27,7 @@ model.fit(inV_iris, deV_iris, epochs=10)
 model.predict(inV_iris[-5:])
 
 model.get_weights()
-
+ '''
 
 ##### Hidden Layer 추가
 ### regression
@@ -41,6 +41,8 @@ deV_boston = boston[['medv']]
 print(inV_boston.shape, deV_boston.shape) 
 
 X_boston = tf.keras.layers.Input(shape=[13])
+H_boston = tf.keras.layers.Dense(10, activation='swish')(X_boston)
+H_boston = tf.keras.layers.Dense(10, activation='swish')(X_boston)
 H_boston = tf.keras.layers.Dense(10, activation='swish')(X_boston)
 Y_boston = tf.keras.layers.Dense(1)(H_boston)
 model_boston = tf.keras.models.Model(X_boston, Y_boston)
