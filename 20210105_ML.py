@@ -2,7 +2,7 @@
 
 import pandas as pd
 import tensorflow as tf
-''' 
+
 ##### 범주형 데이터의 분류 : classification
 url_iris = 'https://raw.githubusercontent.com/blackdew/tensorflow1/master/csv/iris.csv'
 iris = pd.read_csv(url_iris)
@@ -27,7 +27,7 @@ model.fit(inV_iris, deV_iris, epochs=10)
 model.predict(inV_iris[-5:])
 
 model.get_weights()
- '''
+
 
 ##### Hidden Layer 추가
 ### regression
